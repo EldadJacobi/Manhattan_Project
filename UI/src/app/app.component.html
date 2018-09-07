@@ -1,0 +1,15 @@
+
+<h1>Welcome to Manhattan Project</h1>
+
+<div class="custom-select" style="width:300px;">
+  <form #dropDown="ngForm">
+
+    <select [(ngModel)]="data" (ngModelChange)="onSelected($event)" name="data">
+      <option *ngFor="let bank of bankListFromServer" [ngValue]="bank">{{bank.name}}</option>
+    </select>
+    <p>{{selected}}</p>
+    <p>{{dictionaryName}}</p>
+    <p>{{dictionaryVersion}}</p>
+
+  </form>
+</div>
